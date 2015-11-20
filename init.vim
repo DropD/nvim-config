@@ -23,7 +23,6 @@ NeoBundle 'scrooloose/nerdtree'
 "NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'easymotion/vim-easymotion'
-NeoBundle 'powerline/powerline'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'euclio/vim-markdown-composer', {
 \ 'build' : {
@@ -65,10 +64,6 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline_powerline_fonts=1
 let g:airline_theme='term'
 
-"powerline
-"python3 from powerline import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
 set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline:h12 "uncomment if not on macbook-pro
 
 NeoBundleCheck
