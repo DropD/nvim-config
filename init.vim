@@ -32,12 +32,16 @@ NeoBundle 'euclio/vim-markdown-composer', {
 \    },
 \}
 NeoBundle 'bling/vim-airline'
+NeoBundle 'benekastah/neomake'
+NeoBundle 'kassio/neoterm'
+
 
 call neobundle#end()
 
 filetype plugin indent on
 set autoindent
 set smartindent
+set shiftwidth=4
 syntax enable
 autocmd Filetype python set tabstop=4|set shiftwidth=4|set expandtab
 
@@ -58,6 +62,9 @@ let NERDTreeShowBookmarks=1
 "easymotion
 nmap , <Plug>(easymotion-prefix)
 
+"terminal
+tnoremap <C-w> <C-\><C-n><C-w>
+
 "airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -65,5 +72,13 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='term'
 
 set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline:h12 "uncomment if not on macbook-pro
+
+"gui
+if has('gui_running')
+    "set transparency=20
+    colorscheme torte
+    set ghr=20
+    hi FoldColumn guibg=black
+endif
 
 NeoBundleCheck
