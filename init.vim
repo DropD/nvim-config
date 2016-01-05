@@ -6,6 +6,7 @@ if has('vim_starting')
 endif
 
 call neobundle#begin(expand('~/.config/nvim/bundle'))
+call neobundle#local(expand('~/.config/nvim/local/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -20,7 +21,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'tpope/vim-markdown'
@@ -34,7 +34,8 @@ NeoBundle 'euclio/vim-markdown-composer', {
 NeoBundle 'bling/vim-airline'
 NeoBundle 'benekastah/neomake'
 NeoBundle 'kassio/neoterm'
-
+NeoBundle 'argtextobj.vim'
+NeoBundle 'snippetsEmu'
 
 call neobundle#end()
 
@@ -80,5 +81,8 @@ if has('gui_running')
     set ghr=20
     hi FoldColumn guibg=black
 endif
+
+"NeoCommentor
+map <Leader>' <Plug>CommentLines
 
 NeoBundleCheck
