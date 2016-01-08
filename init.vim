@@ -6,6 +6,7 @@ if has('vim_starting')
 endif
 
 call neobundle#begin(expand('~/.config/nvim/bundle'))
+call neobundle#local(expand('~/.config/nvim/local/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -20,7 +21,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'tpope/vim-markdown'
@@ -36,6 +36,8 @@ NeoBundle 'benekastah/neomake'
 NeoBundle 'kassio/neoterm'
 NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
 NeoBundle 'klen/python-mode'
+NeoBundle 'argtextobj.vim'
+NeoBundle 'snippetsEmu'
 
 call neobundle#end()
 
@@ -87,5 +89,8 @@ autocmd Filetype latex,tex imap <C-l><C-p> <Plug>LatexCloseCurEnv
 
 "waf meta build system
 autocmd BufEnter wscript set filetype=python
+
+"ricoh.commentor2
+map <Leader>' <Plug>CommentLines
 
 NeoBundleCheck
