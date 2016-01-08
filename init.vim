@@ -34,7 +34,8 @@ NeoBundle 'euclio/vim-markdown-composer', {
 NeoBundle 'bling/vim-airline'
 NeoBundle 'benekastah/neomake'
 NeoBundle 'kassio/neoterm'
-
+NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
+NeoBundle 'klen/python-mode'
 
 call neobundle#end()
 
@@ -80,5 +81,11 @@ if has('gui_running')
     set ghr=20
     hi FoldColumn guibg=black
 endif
+
+"latex
+autocmd Filetype latex,tex imap <C-l><C-p> <Plug>LatexCloseCurEnv
+
+"waf meta build system
+autocmd BufEnter wscript set filetype=python
 
 NeoBundleCheck
