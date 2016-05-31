@@ -43,6 +43,10 @@ NeoBundle 'gregsexton/gitv', {
 \ 'depends' : 
 \   [ 'tpope/vim-fugitive' ]
 \}
+NeoBundle 'xolox/vim-notes', {
+\ 'depends' : [
+\   'xolox/vim-misc'
+\ ]}
 
 call neobundle#end()
 
@@ -105,5 +109,8 @@ let g:pymode_rope_complete_on_dot = 0
 "neoterm
 let g:neoterm_position="vertical"
 let g:neoterm_automap_keys="\t"
+
+"vim-notes
+let g:notes_directories = ['~/Dropbox/Notes']
 
 NeoBundleCheck
