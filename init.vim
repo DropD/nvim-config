@@ -38,6 +38,10 @@ NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
 NeoBundle 'klen/python-mode'
 NeoBundle 'argtextobj.vim'
 NeoBundle 'snippetsEmu'
+NeoBundle 'xolox/vim-notes', {
+\ 'depends' : [
+\   'xolox/vim-misc'
+\ ]}
 
 call neobundle#end()
 
@@ -92,5 +96,8 @@ autocmd BufEnter wscript set filetype=python
 
 "ricoh.commentor2
 map <Leader>' <Plug>CommentLines
+
+"vim-notes
+let g:notes_directories = ['~/Dropbox/Notes']
 
 NeoBundleCheck
