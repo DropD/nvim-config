@@ -31,13 +31,18 @@ NeoBundle 'euclio/vim-markdown-composer', {
 \     'unix' : 'cargo build --release',
 \    },
 \}
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'benekastah/neomake'
 NeoBundle 'kassio/neoterm'
 NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
 NeoBundle 'klen/python-mode'
 NeoBundle 'argtextobj.vim'
 NeoBundle 'snippetsEmu'
+NeoBundle 'gregsexton/gitv', {
+\ 'depends' : 
+\   [ 'tpope/vim-fugitive' ]
+\}
 
 call neobundle#end()
 
@@ -47,6 +52,7 @@ set smartindent
 set shiftwidth=4
 syntax enable
 autocmd Filetype python set tabstop=4|set shiftwidth=4|set expandtab
+autocmd Filetype rst set tabstop=3|set shiftwidth=3|set expandtab
 
 set incsearch
 set virtualedit=all
@@ -92,5 +98,12 @@ autocmd BufEnter wscript set filetype=python
 
 "ricoh.commentor2
 map <Leader>' <Plug>CommentLines
+
+"pymode
+let g:pymode_rope_complete_on_dot = 0
+
+"neoterm
+let g:neoterm_position="vertical"
+let g:neoterm_automap_keys="\t"
 
 NeoBundleCheck
